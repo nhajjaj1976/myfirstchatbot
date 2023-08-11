@@ -5,7 +5,7 @@ import openai
 openai.api_key = st.secrets["openai"]["gpt4_api_key"]
 
 def get_gpt4_response(prompt):
-    response = openai.Completion.create(engine="text-davinci-004", prompt=prompt, max_tokens=150)
+    response = openai.Completion.create(engine="GPT-4", prompt=prompt, max_tokens=150)
     return response.choices[0].text.strip()
 
 st.title("My GPT-4 Chatbot")
