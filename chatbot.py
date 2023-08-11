@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # Initialize the GPT-4 API client with the secret key
-openai.api_key = st.secrets["gpt4_api_key"]
+openai.api_key = st.secrets["openai"]["gpt4_api_key"]
 
 def get_gpt4_response(prompt):
     response = openai.Completion.create(engine="text-davinci-004", prompt=prompt, max_tokens=150)
